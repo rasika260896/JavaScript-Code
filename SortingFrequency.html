@@ -1,0 +1,33 @@
+/*Sorting elements of an array by frequency*/
+<!DOCTYPE html>
+<html>
+<body>
+
+<script>
+function SortByFrequency(arr){
+var SortByElements=[];
+var SortByFrequency=[];
+
+arr.sort(function(a,b){
+    return a-b;
+})
+for(var i=0;i<arr.length;i++){
+    var count=1;
+    if(i<arr.length-1 && arr[i]===arr[i+1]){
+       
+        count++;
+        
+    }
+
+    console.log(arr[i] + ":" + count);
+    count++;
+    //console.log(SortByElements.push(arr[i]));
+    //console.log(SortByFrequency.push(count));
+}
+
+}
+
+SortByFrequency([10,20,30,20,30,20]);
+</script>
+</body>
+</html>

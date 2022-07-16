@@ -1,0 +1,52 @@
+/* Function to print Longest Palindrome */
+<!DOCTYPE html>
+<html>
+<body>
+
+<script>
+var newArray= [];
+function isPalindrome(a){
+ var sum=0,rev;
+    //logic for reversing a number
+
+        var temp;
+        temp = a;
+        while (a > 0) {
+            rev = a % 10;
+            sum = sum * 10 + rev;
+            a= parseInt(a/10);
+
+        }
+    
+
+        console.log(sum); 
+        console.log(temp); 
+
+        if(sum===temp){
+            newArray.push(temp);
+            console.log("The number is Palindrome");
+        }
+        else{
+            console.log("The number is not palindrome")
+        }
+     
+}    
+function LongestPalindrome(arr) {
+    
+    arr.sort(function (a, b) { return b - a });
+    console.log(arr);
+
+    for(i=0;i<arr.length;i++){
+        if(isPalindrome(arr[i])){
+            return arr[i];
+        }
+    }
+    console.log(newArray);
+    
+}
+
+LongestPalindrome([2, 151, 1441, 20, 100]);
+
+</script>
+</body>
+</html>
